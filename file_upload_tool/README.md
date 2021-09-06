@@ -17,11 +17,7 @@ In order to runt this program the user must have the following dependencies inst
 - npm
 
 ## Installation
-Go to desired installation directory
-
-`git clone https://github.com/OSU-493-2021/cs493-Sergei-Poliakov.git`
-
-`cd assign4`
+Navigate to project directory. Install npm modules, using the following command.
 
 `npm install`
 
