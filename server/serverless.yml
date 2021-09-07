@@ -1,0 +1,53 @@
+service: #specify service here
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+  region: us-west-2
+  iam: 
+    role:
+      managedPolicies:
+        - 'arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess'
+        - 'arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess'
+        - 'arn:aws:iam::aws:policy/AmazonSQSFullAccess'
+
+plugins:
+  - serverless-offline
+  - serverless-express
+
+functions:
+  # auth:
+  #   handler: auth.handler
+  
+  app:
+    handler: handler.api
+    events:
+      - http:
+          method: ANY
+          path: /{proxy+}
+          # cors: true
+          # authorizer: auth
+          #   name: auth
+          #   type: request
+          #   identifySource: method.request.header.authorization
+    
+  sqsInterface:
+    handler: handler.sqsInterface
+    events:
+      - sqs:
+          arn:
+            Fn::GetAtt:
+              - MusicAppQueue
+              - Arn
+          batchSize: 10
+
+resources:
+  Resources:
+    MusicAppQueue:
+      Type: "AWS::SQS::Queue"
+      Properties:
+        QueueName: "MusicAppQueue"
+

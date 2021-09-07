@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sls": "sls",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.858.0",
+    "body-parser": "^1.19.0",
+    "firebase-admin": "^9.5.0",
+    "serverless-express": "^2.0.11"
+  },
+  "devDependencies": {
+    "serverless": "^2.30.3",
+    "serverless-offline": "^6.8.0"
+  }
+}

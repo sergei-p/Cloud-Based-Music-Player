@@ -1,1 +1,5 @@
 file_upload_tool/node_modules
+server/node_modules
+server/music-app-96e8a-firebase-adminsdk-bnd7u-e997b2fc93.json
+server/http.rest
+server/.serverless
