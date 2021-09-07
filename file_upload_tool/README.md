@@ -1,4 +1,4 @@
-# AWS S3 & DynamoDB CLI Tool
+# AWS S3 & DynamoDB CLI Upload Tool
 
 
 ### Table of Contents
