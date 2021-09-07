@@ -2,7 +2,7 @@
 
 
 ## Description
-A web based client application that plays songs that sored in an AWS S3 bucket. The project was built using React.
+A web based client application that plays songs that are sored in an AWS S3 bucket. The project was built using React.
 
 ## Link to Site
 https://music-app-96e8a.web.app/
