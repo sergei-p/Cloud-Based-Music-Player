@@ -1,4 +1,4 @@
-# Assignment 7 Front End
+# Front End For Music Player
 
 
 ## Description
